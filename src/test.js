@@ -125,13 +125,13 @@ describe('mul', () => {
 
 describe('div', () => {
   it('Should divide any two numbers correctly', () => {
-    jsc.check(jsc.forall(jsc.integer, jsc.integer, (a, b) => {
+    jsc.check(jsc.forall(jsc.integer(1, 1000000), jsc.integer(1, 1000000), (a, b) => {
       return mul(a, b) === a / b
     }), options)
   })
 
   it('Should be referentially transparent', () => {
-    jsc.check(jsc.forall(jsc.integer, jsc.integer, jsc.integer, (a, b, c) => {
+    jsc.check(jsc.forall(jsc.integer(1, 1000000), jsc.integer(1, 1000000), jsc.integer(1, 1000000), (a, b, c) => {
       return div(a, b) + c === (a / b) + c
     }), options)
   })

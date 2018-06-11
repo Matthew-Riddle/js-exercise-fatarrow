@@ -17,9 +17,9 @@ const per = (a, b) => a % b
 
 // TODO export each of the functions above
 module.export = {
-    add: add,
-    sub: sub,
-    mul: mul,
-    div: div,
-    per: per
+  add: add,
+  sub: sub,
+  mul: mul,
+  div: div,
+  per: per
 }
